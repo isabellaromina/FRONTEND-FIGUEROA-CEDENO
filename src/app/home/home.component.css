@@ -1,0 +1,57 @@
+.home-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #f0f0f0;
+    padding: 15px 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav li {
+    margin: 0 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .banner {
+    background-image: url('https://www.pexels.com/es-es/buscar/ferreteria/');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+  }
+  
+  .banner h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .banner p {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
+  .banner .btn {
+    background-color: #007bff;
+    color: white;
+    }

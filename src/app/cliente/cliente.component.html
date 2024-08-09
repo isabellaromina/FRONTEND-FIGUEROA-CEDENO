@@ -1,0 +1,79 @@
+<p></p>
+
+
+<h1 class="text-center">Registro de Clientes</h1>
+
+<div class="container py-4  border border-primary mt-5">
+
+   
+<div class="container textcenter">
+    <div class="form-group">
+        <label for="nombre " class="form-label ">Nombre</label>
+        <br>
+        <input type="text " [(ngModel)]="nombre " class="form-control-lg " placeholder="Nombre">
+        <br>
+        <label for="tipoproducto " class="form-label ">Apellido</label>
+        <br>
+        <input type="text " [(ngModel)]="apellido " class="form-control-lg " placeholder="Apellido">
+        <br>
+        <label for="cantidadingresada " class="form-label ">Telefono</label>
+        <br>
+        <input type="number " [(ngModel)]="telefono " class="form-control-lg " placeholder="telefono">
+        <br>
+        <label for="FechaIngreso " class="form-label ">Correo</label>
+        <br>
+        <input type="text " [(ngModel)]="correo " class="form-control-lg ">
+        <br>
+        <label for="FechaIngreso " class="form-label ">Direccion</label>
+        <br>
+        <input type="text " [(ngModel)]="direccion " class="form-control-lg ">
+        <br>
+        <label for="FechaIngreso " class="form-label ">Genero</label>
+        <br>
+        <input type="text " [(ngModel)]="genero " class="form-control-lg ">
+        <br>
+        <button class="btn btn-outline-warning " (click)="obtenerclientes()">Consultar Cliente</button>
+        <button class="btn btn-outline-success m-2" (click)=" agregarCliente() ">Agregar Ciente</button>
+    </div>
+</div>
+
+
+
+<div class="container mt-4 ">
+    <table class="table table-success table-striped " id="dataTable ">
+        <thead>
+            <tr>
+                <th scope="col ">Codigo</th>
+                <th scope="col ">Nombre</th>
+                <th scope="col ">Apellido</th>
+                <th scope="col ">Telefono</th>
+                <th scope="col ">Correo</th>
+                <th scope="col ">Direccion</th>
+                <th scope="col ">Genero</th>
+                <td scope="col">Acciones</td>
+            </tr>
+        </thead>
+        <tbody>
+            @for(elem of listaCliente; track elem){
+            <tr>
+                <td>{{elem.id}}</td>
+                <td>{{elem.nombre}}</td>
+                <td>{{elem.apellido}}</td>
+                <td>{{elem.telefono}}</td>
+                <td>{{elem.correo}}</td>
+                <td>{{elem.direccion}}</td>
+                <td>{{elem.genero}}</td>
+                <td>
+                    <button class="btn btn-outline-warning " (click)="actualizarCliente()">editar</button>
+                    <button class="btn btn-outline-success m-2" (click)=" eliminarCliente(elem.id) ">eliminar</button>
+
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+
